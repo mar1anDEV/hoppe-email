@@ -181,13 +181,13 @@ html, body {
 }
 .brands{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 40px 120px;
     align-items: center;
 }
 .brand{
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 
