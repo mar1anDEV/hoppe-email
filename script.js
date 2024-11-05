@@ -8,7 +8,6 @@ const zentralen = {
     HockenheimZentrale: { postalCode: "68766", email: "hockenheim@hofmei.de", lat: 49.3227, lon: 8.5428 },
     KitzingenZentrale: { postalCode: "97318", email: "kitzingen@hofmei.de", lat: 49.7395, lon: 10.1517 }
 };
-
 async function getData(postalCode) {
     const countryName = "Deutschland";
     const apiKey = "ctMrmSANgw9XL0qEqRyVCO-rWcOY59jxTWe3ps2LMxQ";
@@ -20,21 +19,18 @@ async function getData(postalCode) {
             throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
-
         
         if (json.items.length === 0) {
             throw new Error("Invalid postal code");
         }
 
-       
         const returnedPostalCode = json.items[0].address.postalCode;
-
         
         if (returnedPostalCode !== postalCode) {
             throw new Error("Postal code mismatch: invalid code");
         }
 
-        // Return the coordinates if valid
+       
         return { lat: json.items[0].position.lat, lon: json.items[0].position.lng };
     } catch (error) {
         console.error("Error fetching geolocation data:", error.message);
@@ -66,7 +62,6 @@ function findNearestZentrale(inputLat, inputLon) {
             closestZentrale = zentrale;
         }
     }
-
     return closestZentrale;
 }
 
@@ -84,7 +79,6 @@ document.getElementById('submitBtn').addEventListener('click', async function ()
         } else {
             resultResponse.textContent = 'Postleitzahl ungültig';
             resultResponse.style.color = 'red'
-
         }
     } else {
         document.querySelector('.result').textContent = "Postleitzahl ungültig";
