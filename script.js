@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
         // Call getData with await to handle asynchronous behavior
         const result = await getData(postalCode);
-        for item in items
+    
     
         // Display result if available, or handle case where no result is returned
         if (result) {
