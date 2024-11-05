@@ -187,6 +187,7 @@ html, body {
 }
 .brand{
     cursor: pointer;
+    padding: 10px;
 }
 
 
