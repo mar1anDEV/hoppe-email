@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon-16x16.png">
+    <script src="fetch.js"></script>
     <title>E-Mail über Postleitzahl finden</title>
 </head>
 <body>
@@ -45,27 +46,32 @@
                             </h3>
                         </span>
                     </div>
-                    <div class="form-container">
-                        <div class="inputStyle">
-                            <div class="input-padding">
-                                <input type="text" id="postal-code" class="inputText" name="postal-code" placeholder="Postleitzahl:" required>
+
+                    <form id="submitForm">
+                        <div class="form-container">
+                            <div class="inputStyle">
+                                <div class="input-padding">
+                                    <input type="text" id="postal-code" class="inputText" name="postal-code" placeholder="Postleitzahl:" required>
+                                </div>
+                            </div>
+                            <div class="email-result">
+                                <p>
+                                    <strong>
+                                        <h1 class="result">
+                                            
+                                        </h1>
+                                    </strong>
+                                </p>
+                            </div>
+                            <div class="btn">
+                                <div class="btn-suchen">
+                                    <button type="submit" id="submitBtn" class="button">Email Suchen
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <div class="email-result" style="text-align: center; padding-top: 20px;">
-                            <p>
-                                <strong>
-                                    <h1 class="result">
-                                    </h1>
-                                </strong>
-                            </p>
-                        </div>
-                        <div class="btn">
-                            <div class="btn-suchen">
-                                <button type="submit" id="submitBtn" class="button">Email Suchen
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
+
                 </div>
 
                 <div class="container-brands">
@@ -93,6 +99,11 @@
 
         </div>
     </section>
+    
+</body>
+
+</html>
+
     
 </body>
 <script src="script.js"></script>
